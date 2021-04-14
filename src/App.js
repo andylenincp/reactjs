@@ -1,8 +1,25 @@
+import React from 'react';
 import './App.css';
+
+function Helloworld() {
+  return (
+    <div id="hello">Hello world</div>
+  );
+}
+
+//const App = () => <div>This is my component: <Helloworld/></div>
+
+/*
+class App extends React.Component {
+  render() {
+    return <div>This is my component: <Helloworld/></div>;
+  }
+}
+*/
 
 function App() {
   return (
-    <div>Hello World</div>
+    <div>This is my component: <Helloworld/></div>
   );
 }
 
