@@ -1,9 +1,12 @@
 import React from 'react';
 import './App.css';
 
-function Helloworld() {
+function Helloworld(props) {
   return (
-    <div id="hello">Hello world</div>
+    <div id="hello">
+      <h3>{props.title}</h3>
+      {props.mytext}
+    </div>
   );
 }
 
@@ -19,7 +22,12 @@ class App extends React.Component {
 
 function App() {
   return (
-    <div>This is my component: <Helloworld/></div>
+    <div>
+      This is my component: 
+      <Helloworld mytext="Andy" title="Component 1" />
+      <Helloworld mytext="Castillo" title="Component 2" />
+      <Helloworld mytext="Palma" title="Component 3" />
+    </div>
   );
 }
 
