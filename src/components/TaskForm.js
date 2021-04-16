@@ -8,6 +8,7 @@ export default class TaskForm extends Component {
     }
 
     onSubmit = e => {
+        this.props.addTask(this.state.title, this.state.description)
         e.preventDefault();
     }
 
@@ -18,6 +19,7 @@ export default class TaskForm extends Component {
     }
 
     render() {
+        this.props.addTask();
         return (
             <form onSubmit={this.onSubmit}>
                 <input type="text" name="title" placeholder="Write a task" onChange={this.onChange} value={this.state.title}/>
